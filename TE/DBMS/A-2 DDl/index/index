@@ -1,0 +1,10 @@
+ create index myindex 
+mysql-> on tour (source, destination);
+Query OK, 0 rows affected (0.29 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql->alter table tour 
+    -> drop index myindex;
+Query OK, 0 rows affected (0.16 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+

@@ -1,0 +1,35 @@
+create database abc;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use abc
+Database changed
+mysql> create table mytable 
+    -> ( name varchar(50) , age integer );
+Query OK, 0 rows affected (0.28 sec)
+
+mysql> alter table mytable add address varchar(20);
+Query OK, 0 rows affected (0.56 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into mytable values("ria",20, "pune");
+Query OK, 1 row affected (0.06 sec)
+
+mysql> insert into mytable values("rohit",19, "mumbai");
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into mytable values("shashi",20, "sangli");
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into mytable values("ankita",20, "dapoli");
+Query OK, 1 row affected (0.03 sec)
+
+mysql> truncate table mytable;
+Query OK, 0 rows affected (0.20 sec)
+
+mysql> select * from mytable;
+Empty set (0.00 sec)
+
+mysql> drop table mytable;
+Query OK, 0 rows affected (0.15 sec)
+
+

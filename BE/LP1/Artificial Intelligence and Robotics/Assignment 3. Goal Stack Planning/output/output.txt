@@ -1,0 +1,1369 @@
+-----------
+CLEAR(D)
+ARMEMPTY
+ON(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ARMEMPTY
+ON(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+ON(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(D,C) False Replaced with action
+-----------
+CLEAR(C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(C) False Replaced with action
+-----------
+ARMEMPTY
+CLEAR(A)
+ON(A,C)
+ON(A,C)^CLEAR(A)^ARMEMPTY
+UNSTACK(A,C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(A)
+ON(A,C)
+ON(A,C)^CLEAR(A)^ARMEMPTY
+UNSTACK(A,C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(A) True pushed off Stack
+-----------
+ON(A,C)
+ON(A,C)^CLEAR(A)^ARMEMPTY
+UNSTACK(A,C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(A,C) True pushed off Stack
+-----------
+ON(A,C)^CLEAR(A)^ARMEMPTY
+UNSTACK(A,C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(A,C)^CLEAR(A)^ARMEMPTY Compound Split Before Re-entry
+-----------
+ARMEMPTY
+CLEAR(A)
+ON(A,C)
+UNSTACK(A,C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(A)
+ON(A,C)
+UNSTACK(A,C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(A) True pushed off Stack
+-----------
+ON(A,C)
+UNSTACK(A,C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(A,C) True pushed off Stack
+-----------
+UNSTACK(A,C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::UNSTACK(A,C)
+-----------
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(D) False Replaced with action
+-----------
+ARMEMPTY
+CLEAR(D)
+ON(D,B)
+ON(D,B)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY False Replaced with action
+-----------
+HOLDING(A)
+HOLDING(A)
+PUTDOWN(A)
+CLEAR(D)
+ON(D,B)
+ON(D,B)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(A) True pushed off Stack
+-----------
+HOLDING(A)
+PUTDOWN(A)
+CLEAR(D)
+ON(D,B)
+ON(D,B)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(A) True pushed off Stack
+-----------
+PUTDOWN(A)
+CLEAR(D)
+ON(D,B)
+ON(D,B)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::PUTDOWN(A)
+-----------
+CLEAR(D)
+ON(D,B)
+ON(D,B)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ON(D,B)
+ON(D,B)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(D,B) True pushed off Stack
+-----------
+ON(D,B)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(D,B)^CLEAR(D)^ARMEMPTY Compound Split Before Re-entry
+-----------
+ARMEMPTY
+CLEAR(D)
+ON(D,B)
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(D)
+ON(D,B)
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ON(D,B)
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(D,B) True pushed off Stack
+-----------
+UNSTACK(D,B)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::UNSTACK(D,B)
+-----------
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(D)^CLEAR(C) Compound Split Before Re-entry
+-----------
+CLEAR(C)
+HOLDING(D)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(C) True pushed off Stack
+-----------
+HOLDING(D)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(D) True pushed off Stack
+-----------
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::STACK(D,C)
+-----------
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(C,B) False Replaced with action
+-----------
+CLEAR(B)
+HOLDING(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(B) True pushed off Stack
+-----------
+HOLDING(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(C) False Replaced with action
+-----------
+ARMEMPTY
+CLEAR(C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(C) False Replaced with action
+-----------
+ARMEMPTY
+CLEAR(D)
+ON(D,C)
+ON(D,C)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(D)
+ON(D,C)
+ON(D,C)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ON(D,C)
+ON(D,C)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(D,C) True pushed off Stack
+-----------
+ON(D,C)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(D,C)^CLEAR(D)^ARMEMPTY Compound Split Before Re-entry
+-----------
+ARMEMPTY
+CLEAR(D)
+ON(D,C)
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(D)
+ON(D,C)
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ON(D,C)
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(D,C) True pushed off Stack
+-----------
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::UNSTACK(D,C)
+-----------
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ONTABLE(C) True pushed off Stack
+-----------
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ONTABLE(C)^CLEAR(C)^ARMEMPTY Compound Split Before Re-entry
+-----------
+ARMEMPTY
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY False Replaced with action
+-----------
+HOLDING(D)
+HOLDING(D)
+PUTDOWN(D)
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(D) True pushed off Stack
+-----------
+HOLDING(D)
+PUTDOWN(D)
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(D) True pushed off Stack
+-----------
+PUTDOWN(D)
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::PUTDOWN(D)
+-----------
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(C) True pushed off Stack
+-----------
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ONTABLE(C) True pushed off Stack
+-----------
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::PICKUP(C)
+-----------
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(C)^CLEAR(B) Compound Split Before Re-entry
+-----------
+CLEAR(B)
+HOLDING(C)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(B) True pushed off Stack
+-----------
+HOLDING(C)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(C) True pushed off Stack
+-----------
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::STACK(C,B)
+-----------
+ON(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(B,A) False Replaced with action
+-----------
+CLEAR(A)
+HOLDING(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(A) True pushed off Stack
+-----------
+HOLDING(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(B) False Replaced with action
+-----------
+ARMEMPTY
+CLEAR(B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(B) False Replaced with action
+-----------
+ARMEMPTY
+CLEAR(C)
+ON(C,B)
+ON(C,B)^CLEAR(C)^ARMEMPTY
+UNSTACK(C,B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(C)
+ON(C,B)
+ON(C,B)^CLEAR(C)^ARMEMPTY
+UNSTACK(C,B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(C) True pushed off Stack
+-----------
+ON(C,B)
+ON(C,B)^CLEAR(C)^ARMEMPTY
+UNSTACK(C,B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(C,B) True pushed off Stack
+-----------
+ON(C,B)^CLEAR(C)^ARMEMPTY
+UNSTACK(C,B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(C,B)^CLEAR(C)^ARMEMPTY Compound Split Before Re-entry
+-----------
+ARMEMPTY
+CLEAR(C)
+ON(C,B)
+UNSTACK(C,B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(C)
+ON(C,B)
+UNSTACK(C,B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(C) True pushed off Stack
+-----------
+ON(C,B)
+UNSTACK(C,B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ON(C,B) True pushed off Stack
+-----------
+UNSTACK(C,B)
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::UNSTACK(C,B)
+-----------
+ONTABLE(B)
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ONTABLE(B) True pushed off Stack
+-----------
+ONTABLE(B)^CLEAR(B)^ARMEMPTY
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ONTABLE(B)^CLEAR(B)^ARMEMPTY Compound Split Before Re-entry
+-----------
+ARMEMPTY
+CLEAR(B)
+ONTABLE(B)
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ARMEMPTY False Replaced with action
+-----------
+HOLDING(C)
+HOLDING(C)
+PUTDOWN(C)
+CLEAR(B)
+ONTABLE(B)
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(C) True pushed off Stack
+-----------
+HOLDING(C)
+PUTDOWN(C)
+CLEAR(B)
+ONTABLE(B)
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(C) True pushed off Stack
+-----------
+PUTDOWN(C)
+CLEAR(B)
+ONTABLE(B)
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::PUTDOWN(C)
+-----------
+CLEAR(B)
+ONTABLE(B)
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(B) True pushed off Stack
+-----------
+ONTABLE(B)
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ONTABLE(B) True pushed off Stack
+-----------
+PICKUP(B)
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::PICKUP(B)
+-----------
+HOLDING(B)^CLEAR(A)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(B)^CLEAR(A) Compound Split Before Re-entry
+-----------
+CLEAR(A)
+HOLDING(B)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+CLEAR(A) True pushed off Stack
+-----------
+HOLDING(B)
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+HOLDING(B) True pushed off Stack
+-----------
+STACK(B,A)
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+Action Performed  :::::STACK(B,A)
+-----------
+ONTABLE(A)
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ONTABLE(A) True pushed off Stack
+-----------
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D)
+-----------
+ONTABLE(A) ^ ON(B,A) ^ ON(C,B) ^ ON(D,C) ^ ARMEMPTY ^ CLEAR(D) Compound Split Before Re-entry
+-----------
+CLEAR(D)
+ARMEMPTY
+ON(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ARMEMPTY
+ON(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+ON(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ON(D,C) False Replaced with action
+-----------
+CLEAR(C)
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(C) True pushed off Stack
+-----------
+HOLDING(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+HOLDING(D) False Replaced with action
+-----------
+ARMEMPTY
+CLEAR(D)
+ONTABLE(D)
+ONTABLE(D)^CLEAR(D)^ARMEMPTY
+PICKUP(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(D)
+ONTABLE(D)
+ONTABLE(D)^CLEAR(D)^ARMEMPTY
+PICKUP(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ONTABLE(D)
+ONTABLE(D)^CLEAR(D)^ARMEMPTY
+PICKUP(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ONTABLE(D) True pushed off Stack
+-----------
+ONTABLE(D)^CLEAR(D)^ARMEMPTY
+PICKUP(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ONTABLE(D)^CLEAR(D)^ARMEMPTY Compound Split Before Re-entry
+-----------
+ARMEMPTY
+CLEAR(D)
+ONTABLE(D)
+PICKUP(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(D)
+ONTABLE(D)
+PICKUP(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ONTABLE(D)
+PICKUP(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ONTABLE(D) True pushed off Stack
+-----------
+PICKUP(D)
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+Action Performed  :::::PICKUP(D)
+-----------
+HOLDING(D)^CLEAR(C)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+HOLDING(D)^CLEAR(C) Compound Split Before Re-entry
+-----------
+CLEAR(C)
+HOLDING(D)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(C) True pushed off Stack
+-----------
+HOLDING(D)
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+HOLDING(D) True pushed off Stack
+-----------
+STACK(D,C)
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+Action Performed  :::::STACK(D,C)
+-----------
+ON(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ON(C,B) False Replaced with action
+-----------
+CLEAR(B)
+HOLDING(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(B) True pushed off Stack
+-----------
+HOLDING(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+HOLDING(C) False Replaced with action
+-----------
+ARMEMPTY
+CLEAR(C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(C) False Replaced with action
+-----------
+ARMEMPTY
+CLEAR(D)
+ON(D,C)
+ON(D,C)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(D)
+ON(D,C)
+ON(D,C)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ON(D,C)
+ON(D,C)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ON(D,C) True pushed off Stack
+-----------
+ON(D,C)^CLEAR(D)^ARMEMPTY
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ON(D,C)^CLEAR(D)^ARMEMPTY Compound Split Before Re-entry
+-----------
+ARMEMPTY
+CLEAR(D)
+ON(D,C)
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ARMEMPTY True pushed off Stack
+-----------
+CLEAR(D)
+ON(D,C)
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(D) True pushed off Stack
+-----------
+ON(D,C)
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ON(D,C) True pushed off Stack
+-----------
+UNSTACK(D,C)
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+Action Performed  :::::UNSTACK(D,C)
+-----------
+ONTABLE(C)
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ONTABLE(C) True pushed off Stack
+-----------
+ONTABLE(C)^CLEAR(C)^ARMEMPTY
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ONTABLE(C)^CLEAR(C)^ARMEMPTY Compound Split Before Re-entry
+-----------
+ARMEMPTY
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ARMEMPTY False Replaced with action
+-----------
+HOLDING(D)
+HOLDING(D)
+PUTDOWN(D)
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+HOLDING(D) True pushed off Stack
+-----------
+HOLDING(D)
+PUTDOWN(D)
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+HOLDING(D) True pushed off Stack
+-----------
+PUTDOWN(D)
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+Action Performed  :::::PUTDOWN(D)
+-----------
+CLEAR(C)
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(C) True pushed off Stack
+-----------
+ONTABLE(C)
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+ONTABLE(C) True pushed off Stack
+-----------
+PICKUP(C)
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+Action Performed  :::::PICKUP(C)
+-----------
+HOLDING(C)^CLEAR(B)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+HOLDING(C)^CLEAR(B) Compound Split Before Re-entry
+-----------
+CLEAR(B)
+HOLDING(C)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+CLEAR(B) True pushed off Stack
+-----------
+HOLDING(C)
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+HOLDING(C) True pushed off Stack
+-----------
+STACK(C,B)
+ON(B,A)
+ONTABLE(A)
+-----------
+Action Performed  :::::STACK(C,B)
+-----------
+ON(B,A)
+ONTABLE(A)
+-----------
+ON(B,A) True pushed off Stack
+-----------
+ONTABLE(A)
+-----------
+ONTABLE(A) True pushed off Stack
+--Steps to perfrom--
+UNSTACK(A,C)
+PUTDOWN(A)
+UNSTACK(D,B)
+STACK(D,C)
+UNSTACK(D,C)
+PUTDOWN(D)
+PICKUP(C)
+STACK(C,B)
+UNSTACK(C,B)
+PUTDOWN(C)
+PICKUP(B)
+STACK(B,A)
+PICKUP(D)
+STACK(D,C)
+UNSTACK(D,C)
+PUTDOWN(D)
+PICKUP(C)
+STACK(C,B)
+

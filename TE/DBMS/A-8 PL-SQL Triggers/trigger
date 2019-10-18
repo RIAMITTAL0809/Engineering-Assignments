@@ -1,0 +1,121 @@
+create table library(
+    bookname varchar(20),
+    bookauthor varchar(20),
+    bookentered date
+);
+
+create table libraryAudit(
+    bookname varchar(20),
+    bookauthor varchar(20),
+    bookentered date
+);
+
+create table librarynew(
+    bookname varchar(20),
+    bookauthor varchar(20),
+    bookentered date
+);
+
+insert into library
+values
+("Hamlet", "Bard", now()),
+("Paradise Lost", "John Milton", now()),
+("Norwegian Wood", "Murakami", now()),
+("Beowulf", "Many", now()),
+("Sputnik Sweetheart", "Murakami", now()),
+("Kafka On The Shore", "Murakami", now()),
+("Macbeth", "Bard", now()),
+("Othello", "Bard", now()),
+("Catcher In The Rye", "J D Salinger", now()),
+("Milk and Honey", "Rupi Kaur", now()),
+("Metamorphosis", "Franz Kafka", now()),
+("Child 44", "Tom Rob Smith", now()),
+("The Resurrectionist", "James Bradley", now());
+
+select * from library;
+
+#before insert
+create trigger insertbook before insert on library
+for each row set 
+NEW.bookname = "Trash",
+NEW.bookauthor = "Garbage";
+
+insert into library values(
+    "Two States", "Chetan Bhagat", now()
+);
+
+select * from library;
+
+delete from library where bookname = "Trash";
+
+drop trigger insertbook;
+
+#after insert
+create trigger afterinsert after insert on library
+for each row
+insert into librarynew values(
+    new.bookname, new.bookauthor, new.bookentered
+);
+
+select * from librarynew;
+
+insert into library values(
+    "Looking For Alaska", "John Green", now()
+);
+
+select * from librarynew;
+
+#before update
+create trigger beforeupdate before update on library
+for each row
+insert into libraryaudit values(
+    old.bookname, old.bookauthor, now()
+);
+
+update library
+set library.bookauthor = "William Shakespeare" 
+where bookauthor = "Bard";
+
+select * from libraryaudit;
+
+select * from library;
+
+#after update
+create trigger afterupdate after update on library
+for each row
+insert into librarynew values(
+    new.bookname, new.bookauthor, new.bookentered
+);
+
+select * from librarynew;
+
+insert into library values
+("Username Evie", "Joe Sugg", now());
+
+#before delete;
+create trigger beforedelete before delete on library
+for each row
+insert into libraryaudit values(
+    old.bookname, old.bookauthor, now()
+);
+
+delete from library where bookauthor = "Rupi Kaur";
+
+select * from libraryaudit;
+
+drop trigger beforedelete;
+
+#after delete
+create trigger afterdelete after delete on library
+for each row
+insert into libraryaudit values(
+    old.bookname, old.bookauthor, now()
+);
+
+delete from library where bookauthor = "Tom Rob Smith";
+
+select * from libraryaudit;
+
+drop table library;
+drop table libraryaudit;
+drop table librarynew;

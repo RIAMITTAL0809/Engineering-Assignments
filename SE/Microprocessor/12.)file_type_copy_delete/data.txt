@@ -1,0 +1,5 @@
+welcome to the new type copy delete program
+ion successful.
+Output stored in same file...
+
+35789

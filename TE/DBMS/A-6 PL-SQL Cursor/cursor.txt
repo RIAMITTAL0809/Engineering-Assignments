@@ -1,0 +1,55 @@
+mysql> use student_info;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> delimiter //
+mysql>  CREATE PROCEDURE newproc(in rno1 int) 
+ 
+->	BEGIN 
+->
+->	DECLARE c1 CURSOR FOR SELECT rno FROM roll1 where rno=rno1;     
+    -> 
+    -> OPEN c1;   
+    -> 
+    -> FETCH  c1 INTO rno1;       
+    -> 
+    -> If not exists(select * from roll2 where rno=rno1) then         
+    -> 
+    -> insert into roll2 select * from roll1 where rno=rno1;       
+    -> 
+    -> End If;    
+    -> 
+    -> CLOSE c1;   
+    -> 
+    -> END //
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> 
+mysql> CALL newproc(2);
+    -> //
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from roll2//
++------+-------+---------+
+| rno  | name  | address |
++------+-------+---------+
+|    2 | rohit | mumbai  |
++------+-------+---------+
+1 row in set (0.00 sec)
+
+mysql> CALL newproc(1);
+    -> //
+Query OK, 1 row affected (0.04 sec)
+
+mysql> select * from roll2//
++------+-------+---------+
+| rno  | name  | address |
++------+-------+---------+
+|    2 | rohit | mumbai  |
+|    1 | ria   | pune    |
++------+-------+---------+
+2 rows in set (0.00 sec)
+
+
+

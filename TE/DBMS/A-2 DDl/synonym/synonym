@@ -1,0 +1,21 @@
+ 
+mysql> CALL sys.create_synonym_db('project','tour');
++----------------------------------------+
+| summary                                |
++----------------------------------------+
+| Created 3 views in the `tour` database |
++----------------------------------------+
+1 row in set (0.19 sec)
+
+Query OK, 0 rows affected (0.19 sec)
+
+mysql> show full tables from tour;
++----------------+------------+
+| Tables_in_tour | Table_type |
++----------------+------------+
+| holiday        | VIEW       |
+| tour           | VIEW       |
+| user           | VIEW       |
++----------------+------------+
+3 rows in set (0.00 sec)
+

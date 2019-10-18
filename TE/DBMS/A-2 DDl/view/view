@@ -1,0 +1,86 @@
+ select * from tour;
++-----------+-------------+----------+------+---------------+----+
+| source    | destination | distance | cost | travel_by     | id |
++-----------+-------------+----------+------+---------------+----+
+| PUNE      | MUMBAI      |      150 | 2000 | ROAD,RAIL,AIR |  1 |
+| PUNE      | BENGALURU   |      840 | 4000 | ROAD,RAIL,AIR |  2 |
+| PUNE      | HYDERABAD   |      560 | 3000 | ROAD,RAIL,AIR |  3 |
+| PUNE      | KOLKATA     |     1950 | 5000 | RAIL,AIR      |  4 |
+| PUNE      | NEW DELHI   |     1450 | 5000 | RAIL,AIR      |  5 |
+| PUNE      | JAIPUR      |     1182 | 5000 | RAIL,AIR      |  6 |
+| MUMBAI    | PUNE        |      150 | 2000 | ROAD,RAIL,AIR |  7 |
+| BENGALURU | PUNE        |      840 | 4000 | ROAD,RAIL,AIR |  8 |
+| HYDERABAD | PUNE        |      560 | 3000 | ROAD,RAIL,AIR |  9 |
+| NEW DELHI | PUNE        |     1450 | 5000 | RAIL,AIR      | 10 |
+| JAIPUR    | PUNE        |     1182 | 5000 | RAIL,AIR      | 11 |
+| MUMBAI    | BENGALURU   |      985 | 3000 | ROAD,RAIL,AIR | 12 |
+| MUMBAI    | HYDERABAD   |      710 | 3000 | ROAD,RAIL,AIR | 13 |
+| MUMBAI    | KOLKATA     |     2050 | 5000 | RAIL,AIR      | 14 |
+| MUMBAI    | NEW DELHI   |     1410 | 4000 | RAIL,AIR      | 15 |
+| MUMBAI    | JAIPUR      |     1160 | 3000 | RAIL,AIR      | 16 |
+| KOLKATA   | PUNE        |     1950 | 5000 | RAIL,AIR      | 17 |
+| NEW DELHI | MUMBAI      |     1410 | 4000 | RAIL,AIR      | 18 |
+| NEW DELHI | JAIPUR      |      268 | 1000 | ROAD,RAIL,AIR | 19 |
+| NEW DELHI | BENGALURU   |     2155 | 4000 | RAIL,AIR      | 20 |
+| NEW DELHI | HYDERABAD   |     1565 | 3500 | RAIL,AIR      | 21 |
+| NEW DELHI | KOLKATA     |     1470 | 3500 | RAIL,AIR      | 22 |
+| KOLKATA   | BENGALURU   |     1860 | 3500 | RAIL,AIR      | 23 |
+| KOLKATA   | HYDERABAD   |     1490 | 3500 | RAIL,AIR      | 24 |
+| KOLKATA   | JAIPUR      |     1510 | 3000 | RAIL,AIR      | 25 |
+| KOLKATA   | MUMBAI      |     2050 | 5000 | RAIL,AIR      | 26 |
+| KOLKATA   | MUMBAI      |     1470 | 3500 | RAIL,AIR      | 27 |
+| BENGALURU | MUMBAI      |      985 | 3000 | RAIL,AIR      | 28 |
+| BENGALURU | HYDERABAD   |      570 | 1000 | ROAD,RAIL,AIR | 29 |
+| BENGALURU | NEW DELHI   |     2155 | 4000 | RAIL,AIR      | 30 |
++-----------+-------------+----------+------+---------------+----+
+30 rows in set (0.00 sec)
+
+mysql> create view places 
+    -> as
+    -> select source,destination 
+    -> from tour ;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> select * from places;
++-----------+-------------+
+| source    | destination |
++-----------+-------------+
+| PUNE      | MUMBAI      |
+| PUNE      | BENGALURU   |
+| PUNE      | HYDERABAD   |
+| PUNE      | KOLKATA     |
+| PUNE      | NEW DELHI   |
+| PUNE      | JAIPUR      |
+| MUMBAI    | PUNE        |
+| BENGALURU | PUNE        |
+| HYDERABAD | PUNE        |
+| NEW DELHI | PUNE        |
+| JAIPUR    | PUNE        |
+| MUMBAI    | BENGALURU   |
+| MUMBAI    | HYDERABAD   |
+| MUMBAI    | KOLKATA     |
+| MUMBAI    | NEW DELHI   |
+| MUMBAI    | JAIPUR      |
+| KOLKATA   | PUNE        |
+| NEW DELHI | MUMBAI      |
+| NEW DELHI | JAIPUR      |
+| NEW DELHI | BENGALURU   |
+| NEW DELHI | HYDERABAD   |
+| NEW DELHI | KOLKATA     |
+| KOLKATA   | BENGALURU   |
+| KOLKATA   | HYDERABAD   |
+| KOLKATA   | JAIPUR      |
+| KOLKATA   | MUMBAI      |
+| KOLKATA   | MUMBAI      |
+| BENGALURU | MUMBAI      |
+| BENGALURU | HYDERABAD   |
+| BENGALURU | NEW DELHI   |
++-----------+-------------+
+30 rows in set (0.00 sec)
+
+mysql> drop view places;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from places;
+ERROR 1146 (42S02): Table 'project.places' doesn't exist
+

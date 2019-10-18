@@ -1,0 +1,95 @@
+mysql> use student_marks;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> insert into stud_marks values(1,"ria", 1000);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> insert into stud_marks values(2,"rohit", 900);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into stud_marks values(3,"shashidhar", 1200);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> insert into stud_marks values(4,"ankita", 900);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> create table results (rollno int primary key,name varchar(30),class varchar(20));
+Query OK, 0 rows affected (0.26 sec)
+
+mysql> delimiter //
+mysql> create procedure gradepro (in marks int,out class char(50)) 
+    -> begin if marks<=1500 and marks >=990 then set class="Distinction" ; 
+    -> end if; if marks<990 and marks >=900 then set class="First Class" ; 
+    -> end if; if marks<900 and marks >=825 then set class="Higher Second Class" ; 
+    -> end if; if marks<825 and marks>=600 then set class="Second Class" ; 
+    -> end if; end;
+    -> //
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> create function findresult (roll_no int) returns int deterministic
+    ->  begin
+    ->  declare fmarks int;
+    ->  declare grade varchar(50);
+    ->  declare s_name varchar(50);
+    ->  select stud_marks.name,stud_marks.totalmarks into s_name,fmarks from stud_marks  where stud_marks.rollno=roll_no;
+    ->  call gradepro(fmarks,@grade);
+    ->  insert into result values(roll_no,s_name,@grade);
+    ->  return roll_no;
+    ->  end;
+    -> //
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select findresult(1);
+    -> //
+ERROR 1146 (42S02): Table 'student_marks.result' doesn't exist
+mysql> 
+mysql> create function findresult1 (roll_no int) returns int deterministic
+    ->  begin
+    ->  declare fmarks int;
+    ->  declare grade varchar(50);
+    ->  declare s_name varchar(50);
+    ->  select stud_marks.name,stud_marks.totalmarks into s_name,fmarks from stud_marks  where stud_marks.rollno=roll_no;
+    ->  call gradepro(fmarks,@grade);
+    ->  insert into results values(roll_no,s_name,@grade);
+    ->  return roll_no;
+    ->  end;
+    -> //
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select findresult1(1)//                                                                                                                                 +----------------+
+| findresult1(1) |
++----------------+
+|              1 |
++----------------+
+1 row in set (0.09 sec)
+
+mysql> select * from results;
+    -> //
++--------+------+-------------+
+| rollno | name | class       |
++--------+------+-------------+
+|      1 | ria  | Distinction |
++--------+------+-------------+
+1 row in set (0.00 sec)
+
+mysql> select findresult1(4)//
++----------------+
+| findresult1(4) |
++----------------+
+|              4 |
++----------------+
+1 row in set (0.04 sec)
+
+mysql> select * from results;
+    -> //
++--------+--------+-------------+
+| rollno | name   | class       |
++--------+--------+-------------+
+|      1 | ria    | Distinction |
+|      4 | ankita | First Class |
++--------+--------+-------------+
+2 rows in set (0.00 sec)
+
+

@@ -1,0 +1,88 @@
+mysql> create database chit4;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use chit4;
+Database changed
+mysql> create table Borrower(Roll_no int, Name varchar(50), DateofIssue date, NameofBook varchar(50), Status varchar(1));
+Query OK, 0 rows affected (0.31 sec)
+
+mysql> create table Fine(Roll_no int,Date date,Amount int);
+Query OK, 0 rows affected (0.25 sec)
+
+mysql> insert into Borrower values(1,"Ria","2017-10-01","Ready Player One","I"),(2,"Rohit","2017-09-20","A Song of Ice and Fire","I"),(3,"Shashidhar","2017-09-01","Harry Potter","I"),(4,"Ankita","2017-08-27","50 Shades","I");
+Query OK, 4 rows affected (0.05 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> 
+mysql> select * from Borrower;
++---------+------------+-------------+------------------------+--------+
+| Roll_no | Name       | DateofIssue | NameofBook             | Status |
++---------+------------+-------------+------------------------+--------+
+|       1 | Ria        | 2017-10-01  | Ready Player One       | I      |
+|       2 | Rohit      | 2017-09-20  | A Song of Ice and Fire | I      |
+|       3 | Shashidhar | 2017-09-01  | Harry Potter           | I      |
+|       4 | Ankita     | 2017-08-27  | 50 Shades              | I      |
++---------+------------+-------------+------------------------+--------+
+4 rows in set (0.00 sec)
+
+mysql> select * from Fine;
+Empty set (0.01 sec)
+
+mysql> delimiter //
+mysql> create procedure calc_Fine(IN Roll int,IN Bname varchar(50))
+    -> 
+    ->      begin
+    -> 
+    ->      declare exit handler for not found select "Wrong Information Entered" as "Exception Occured";
+    -> 
+    ->      set @datediff=0;
+    -> 
+    ->      set @fineamt=0;
+    -> 
+    ->      select datediff(curdate(),DateofIssue) from Borrower where Roll_no=Roll and NameofBook=Bname into @datediff;
+    -> 
+    ->      if @datediff>15 and @datediff<=30 then set @fineamt=(@datediff-15)*5;
+    -> 
+    ->      elseif @datediff>30 then set @fineamt=((15*5)+(@datediff-30)*50);
+    -> 
+    ->      else set @fineamt=0;
+    -> 
+    ->      end if;
+    -> 
+    ->      update Borrower set Status="R" where Roll_no=Roll and NameofBook=Bname;
+    -> 
+    ->      insert into Fine values(Roll,curdate(),@fineamt);
+    -> 
+    ->      end //
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> call calc_Fine(1,"Ready");
+    -> //
++---------------------------+
+| Exception Occured         |
++---------------------------+
+| Wrong Information Entered |
++---------------------------+
+1 row in set (0.07 sec)
+
+Query OK, 0 rows affected (0.07 sec)
+
+mysql> call calc_Fine(1,"Ready Player One")//
+Query OK, 1 row affected (0.11 sec)
+
+mysql> call calc_Fine(2,"A Song of Ice and Fire")//
+Query OK, 1 row affected (0.11 sec)
+
+mysql> select * from Borrower//
++---------+------------+-------------+------------------------+--------+
+| Roll_no | Name       | DateofIssue | NameofBook             | Status |
++---------+------------+-------------+------------------------+--------+
+|       1 | Ria        | 2017-10-01  | Ready Player One       | R      |
+|       2 | Rohit      | 2017-09-20  | A Song of Ice and Fire | R      |
+|       3 | Shashidhar | 2017-09-01  | Harry Potter           | I      |
+|       4 | Ankita     | 2017-08-27  | 50 Shades              | I      |
++---------+------------+-------------+------------------------+--------+
+4 rows in set (0.00 sec)
+
+mysql> 
+
